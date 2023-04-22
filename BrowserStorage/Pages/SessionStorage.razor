@@ -3,20 +3,20 @@
 @inject SessionStorageAccessor SessionStorageAccessor
 
 <form>
-    <label class="form-label">
+    <label>
         Key
-        <input class="form-control" type="text" @bind-value="Key" />
+        <input type="text" @bind-value="Key" />
     </label>
-    <label class="form-label">
+    <label>
         Value
-        <input class="form-control" type="text" @bind-value="Value" />
+        <input type="text" @bind-value="Value" />
     </label>
-    <button class="btn btn-primary" type="button" @onclick="SetValueAsync">Set Value</button>
+    <button type="button" @onclick="SetValueAsync">Set Value</button>
 </form>
 <div>Stored Value: @StoredValue</div>
-<button class="btn btn-primary" type="button" @onclick="GetValueAsync">Get Value</button>
-<button class="btn btn-primary" type="button" @onclick="RemoveAsync">Remove Value</button>
-<button class="btn btn-primary" type="button" @onclick="ClearAllAsync">Clear All</button>
+<button type="button" @onclick="GetValueAsync">Get Value</button>
+<button type="button" @onclick="RemoveAsync">Remove Value</button>
+<button type="button" @onclick="ClearAllAsync">Clear All</button>
 
 @code {
     public string Key { get; set; } = "";

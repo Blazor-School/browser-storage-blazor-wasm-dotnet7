@@ -3,20 +3,20 @@
 @inject MemoryStorageUtility MemoryStorageUtility
 
 <form>
-    <label class="form-label">
+    <label>
         Key
-        <input class="form-control" type="text" @bind-value="Key" />
+        <input type="text" @bind-value="Key" />
     </label>
-    <label class="form-label">
+    <label>
         Value
-        <input class="form-control" type="text" @bind-value="Value" />
+        <input type="text" @bind-value="Value" />
     </label>
-    <button class="btn btn-primary" type="button" @onclick="SetValue">Set Value</button>
+    <button type="button" @onclick="SetValue">Set Value</button>
 </form>
 <div>Stored Value: @StoredValue</div>
-<button class="btn btn-primary" type="button" @onclick="GetValue">Get Value</button>
-<button class="btn btn-primary" type="button" @onclick="Remove">Remove Value</button>
-<button class="btn btn-primary" type="button" @onclick="ClearAll">Clear All</button>
+<button type="button" @onclick="GetValue">Get Value</button>
+<button type="button" @onclick="Remove">Remove Value</button>
+<button type="button" @onclick="ClearAll">Clear All</button>
 
 @code {
     public string Key { get; set; } = "";

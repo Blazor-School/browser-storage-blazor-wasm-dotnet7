@@ -4,18 +4,18 @@
 @inject IndexedDbAccessor IndexedDbAccessor
 
 <form>
-    <label class="form-label">
+    <label>
         Book ID:
-        <input class="form-control" type="number" @bind-value="BookId" />
+        <input type="number" @bind-value="BookId" />
     </label>
     <label class="form-label">
         Book Name:
-        <input class="form-control" type="text" @bind-value="BookName" />
+        <input type="text" @bind-value="BookName" />
     </label>
-    <button class="btn btn-primary" type="button" @onclick="SetValueAsync">Set Value</button>
+    <button type="button" @onclick="SetValueAsync">Set Value</button>
 </form>
 <div>Stored Value: @StoredValue</div>
-<button class="btn btn-primary" type="button" @onclick="GetValueAsync">Get Value</button>
+<button type="button" @onclick="GetValueAsync">Get Value</button>
 
 @code {
     public int BookId { get; set; }
